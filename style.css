@@ -1,0 +1,126 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+.base {
+    border: 2px solid black;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 0;
+}
+
+.newletters {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.numbers1 {
+    height: 410px;
+    width: 15px;
+    float: left;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.area {
+    width: 415px;
+    height: 415px;
+    border: 2px solid black;
+    float: left;
+    display: grid;
+    grid-template-areas:
+        "white black white black white black white black"
+        "black white black white black white black white"
+        "white black white black white black white black"
+        "black white black white black white black white"
+        "white black white black white black white black"
+        "black white black white black white black white"
+        "white black white black white black white black"
+        "black white black white black white black white";
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 0;
+}
+
+.white {
+    grid-area: "white";
+}
+
+.black {
+    grid-area: "black";
+    background-color: black;
+}
+
+.reverse {
+    transform: scale(-1, -1);
+}
+
+.numbers2 {
+    height: 410px;
+    width: 15px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    transform: scale(-1, -1);
+}
+
+.footer-letters {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
